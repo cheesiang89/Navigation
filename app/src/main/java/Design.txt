@@ -1,0 +1,8 @@
+Database design:
+Query query = FirebaseFirestore.getInstance()
+        .collection("chats")
+        .orderBy("timestamp")
+        .limit(50);
+
+*Will need timestamp to keep track of recent chats:
+docRef.update("timestamp", FieldValue.serverTimestamp());

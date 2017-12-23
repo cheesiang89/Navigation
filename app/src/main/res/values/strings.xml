@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">KampongHub</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="facebook_app_id">1970901759835764</string>
+    <string name="fb_login_protocol_scheme">fb1970901759835764</string>
+    <string name="r_email">Email</string>
+    <string name="r_username">Username</string>
+    <string name="r_password">Password</string>
+    <string name="r_address">Zipcode</string>
+    <string name="r_phone">Phone Number</string>
+    <string name="registerBtn">Sign up</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emailHint">Email Address</string>
+    <string name="passwordHint">Password</string>
+    <string name="loginButton">Login</string>
+    <string name="emailSignup">Sign up with Email</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_listing">ListingActivity</string>
+</resources>
