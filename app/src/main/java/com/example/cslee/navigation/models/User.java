@@ -5,7 +5,7 @@ import com.google.firebase.database.IgnoreExtraProperties;
 // [START blog_user_class]
 @IgnoreExtraProperties
 public class User {
-
+//TODO: ProfileFragment can use data here? i.e. have a User object in Firebase Database
     public String username;
     public String email;
 

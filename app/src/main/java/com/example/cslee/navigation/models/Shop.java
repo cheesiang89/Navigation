@@ -5,15 +5,28 @@ import com.google.firebase.database.IgnoreExtraProperties;
 
     // [START comment_class]
     @IgnoreExtraProperties
-    public class Shops {
+    public class Shop {
 
+
+
+        private String shopName;
+        private  String shopImageUrl;
+
+        public Shop() {
+            // Default constructor required for calls to DataSnapshot.getValue(Comment.class)
+        }
+
+        public Shop(String shopname, String shopImageUrl) {
+            this.shopName= shopname;
+            this.shopImageUrl = shopImageUrl;
+                }
 
         public String getShopname() {
-            return shopname;
+            return shopName;
         }
 
         public void setShopname(String shopname) {
-            this.shopname = shopname;
+            this.shopName = shopname;
         }
 
         public String getShopImageUrl() {
@@ -23,19 +36,6 @@ import com.google.firebase.database.IgnoreExtraProperties;
         public void setShopImageUrl(String shopImageUrl) {
             this.shopImageUrl = shopImageUrl;
         }
-
-        public String shopname;
-        public  String shopImageUrl;
-
-        public Shops() {
-            // Default constructor required for calls to DataSnapshot.getValue(Comment.class)
-        }
-
-        public Shops(String shopname, String shopImageUrl) {
-            this.shopname = shopname;
-            this.shopImageUrl = shopImageUrl;
-                }
-
     }
 // [END comment_class]
 

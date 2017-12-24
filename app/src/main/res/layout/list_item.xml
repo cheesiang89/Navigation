@@ -19,4 +19,9 @@
         android:layout_weight="3"
         android:layout_margin="22dp"
         android:id="@+id/itemText"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat"
+        android:id="@+id/btnChat"/>
 </LinearLayout>

@@ -1,13 +1,10 @@
 package com.example.cslee.navigation.fragment;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,26 +13,21 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 
-import com.example.cslee.navigation.FirebaseClient;
 import com.example.cslee.navigation.R;
-import com.example.cslee.navigation.adapter.ShopListAdapter;
-import com.example.cslee.navigation.adapter.ShopListHolder;
+import com.example.cslee.navigation.viewholder.ShopListHolder;
 import com.example.cslee.navigation.models.Shop;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
-import java.util.List;
-
 //Uses in class RecycleViewAdapter + ViewHolder (separate class)
 
-public class ShopListingFragment2 extends Fragment {
+public class ShopListingFragment extends Fragment {
     //This constant is for easy referencing for Log purposes
     private static final String TAG = ShopListingFragment.class.getSimpleName();
 
@@ -52,7 +44,7 @@ public class ShopListingFragment2 extends Fragment {
     Shop shop;
 
     //Empty constructor
-    public ShopListingFragment2() {}
+    public ShopListingFragment() {}
 
     @Nullable
     @Override
@@ -114,7 +106,12 @@ public class ShopListingFragment2 extends Fragment {
                     }
                 });
 */
-                viewHolder.bindToList(model);
+                viewHolder.bindToList(model,new View.OnClickListener(){
+                    @Override
+                    public void onClick(View chatView) {
+                        Toast.makeText(getActivity(),model.getShopname(),Toast.LENGTH_SHORT).show();
+                     }
+                });
             }
         };
         rvShopList.setAdapter(mFirebaseAdapter);

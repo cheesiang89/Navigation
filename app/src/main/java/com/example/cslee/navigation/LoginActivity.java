@@ -43,7 +43,9 @@ public class LoginActivity extends AppCompatActivity {
         facebookSDKInitialize();
         setContentView(R.layout.activity_login);
         emailText = (EditText) findViewById(R.id.email);
+        emailText.setText("lee@example.com");
         passwordText = (EditText) findViewById(R.id.password);
+        passwordText.setText("password");
         registerBtn = (Button) findViewById(R.id.register);
         loginBtn = (Button) findViewById(R.id.login);
         LoginButton FBloginBtn = (LoginButton) findViewById(R.id.fb_login);
@@ -96,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                         //if the task is successful
                         if (task.isSuccessful()) {
                             //start the profile activity
-                           // finish();
+                           finish();
                             startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         } else {
                             //display some message here

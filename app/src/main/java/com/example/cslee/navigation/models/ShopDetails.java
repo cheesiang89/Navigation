@@ -5,7 +5,7 @@ import com.google.firebase.database.IgnoreExtraProperties;
 // [START comment_class]
 @IgnoreExtraProperties
 public class ShopDetails {
-
+    //TODO: Need to store details
     public String id;
     public String name;
     public String address;
